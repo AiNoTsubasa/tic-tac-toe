@@ -31,12 +31,6 @@ class TicTacToe:
     if len(self.__X_MOVES) > 0:
       self.__boards[self.__X_MOVES] = ["X"]
     print(self.__boards.reshape([3, 3]), "\n")
-
-  def __check_win(self, player_moves):
-    for win_pattern in self.__WIN_PATTERNS:
-      if all(x in player_moves for x in win_pattern):
-        return True
-    return False
   
   def __check_win(self, player_moves):
     for win_pattern in self.__WIN_PATTERNS:
